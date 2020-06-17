@@ -1,1 +1,45 @@
-A test Page : )
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(29, 29, 29);
+            overflow: hidden;
+        }
+        .RIP {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .RIP > p:first-child {
+            font-size: 60px;
+            color: red;
+        }
+        .RIP > p:nth-child(2) {
+            font-size: 40px;
+            color: rgb(184, 184, 184);
+        }
+    </style>
+</head>
+<body>
+    <div class="RIP">
+        <p>纪念百事去世</p>
+        <P class="RIP-time"></P>
+    </div>
+   <script>
+       (() => {
+        const goWorldsDays = moment(new Date()).diff(moment('2019-01-09'), 'days')
+
+        document.querySelector('.RIP-time').innerHTML = `🕯️ 第${goWorldsDays}天 🕯️`
+       })()
+   </script>
+</body>
+</html>
